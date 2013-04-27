@@ -12,7 +12,11 @@
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/imageSlider.css" />
+        <script type="text/javascript" src="js/modernizr/modernizr-latest.js"></script>
+        <!-- todo: need to apply the minified versions --->
+        <script type="text/javascript" src="js/JQuery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/imageSlider/jquery.cbpFWSlider.js"></script>
         <!--[if lte IE 8]>
                  <link rel="stylesheet" type="text/css" href="css/simple.css" />
         <![endif]-->
@@ -20,8 +24,12 @@
     <body>
         <div class="container">
             <div class="st-container">
-
-                    <input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
+                    <input type="radio" name="radio-set" id="st-control-0"/>
+                    <a href="#st-panel-0">
+                        PHOTOPEER
+                        <!--<img src="assets/photographer-2.jpg" alt="photopeer logo">-->
+                    </a>
+                    <input type="radio" name="radio-set" id="st-control-1"/>
                     <a href="#st-panel-1">STORIES</a>
                     <input type="radio" name="radio-set" id="st-control-2"/>
                     <a href="#st-panel-2">PHOTOGRAPHERS</a>
@@ -41,8 +49,25 @@
                     <div class="st-scroll">
 
                             <!-- Placeholder text from http://hipsteripsum.me/ -->
+                            
+                            <section class="st-panel" id="st-panel-0">
+                                    <div class="st-deco">
+                                        <img src="assets/photographer-2.jpg" alt="photopeer logo">
+                                    </div>
+                                    <div id="cbp-fwslider" class="cbp-fwslider">
+                                            <ul>
+                                                    <li><a href="#"><img src="images/1.jpg" alt="img01"/></a></li>
+                                                    <li><a href="#"><img src="images/2.jpg" alt="img02"/></a></li>
+                                                    <li><a href="#"><img src="images/3.jpg" alt="img03"/></a></li>
+                                                    <li><a href="#"><img src="images/4.jpg" alt="img04"/></a></li>
+                                                    <li><a href="#"><img src="images/5.jpg" alt="img05"/></a></li>
+                                            </ul>
+                                    </div>
+                                    <!--<h2>HOME</h2>
+                                    <p>The content for the HOME need to be placed here.</p>-->
+                            </section>
 
-                            <section class="st-panel" id="st-panel-1">
+                            <section class="st-panel st-color" id="st-panel-1">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -50,7 +75,7 @@
                                     <p>The content for the stories need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel st-color" id="st-panel-2">
+                            <section class="st-panel" id="st-panel-2">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -58,7 +83,7 @@
                                     <p>The content for the photographers need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel" id="st-panel-3">
+                            <section class="st-panel st-color" id="st-panel-3">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -66,7 +91,7 @@
                                     <p>The content for the initiatives need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel st-color" id="st-panel-4">
+                            <section class="st-panel" id="st-panel-4">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -74,7 +99,7 @@
                                     <p>The content for the about us need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel" id="st-panel-5">
+                            <section class="st-panel st-color" id="st-panel-5">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -82,7 +107,7 @@
                                     <p>The content for the news need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel st-color" id="st-panel-6">
+                            <section class="st-panel" id="st-panel-6">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -90,7 +115,7 @@
                                     <p>The content for the publications need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel" id="st-panel-7">
+                            <section class="st-panel st-color" id="st-panel-7">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -98,7 +123,7 @@
                                     <p>The content for the get involved need to be placed here.</p>
                             </section>
 
-                            <section class="st-panel st-color" id="st-panel-8">
+                            <section class="st-panel" id="st-panel-8">
                                     <div class="st-deco">
                                         <img src="assets/photographer-2.jpg" alt="photopeer logo">
                                     </div>
@@ -111,5 +136,25 @@
             </div><!-- // st-container -->
 
         </div>
+        <script>
+                $( function() {
+                        /*
+                        - how to call the plugin:
+                        $( selector ).cbpFWSlider( [options] );
+                        - options:
+                        {
+                                // default transition speed (ms)
+                                speed : 500,
+                                // default transition easing
+                                easing : 'ease'
+                        }
+                        - destroy:
+                        $( selector ).cbpFWSlider( 'destroy' );
+                        */
+
+                        $( '#cbp-fwslider' ).cbpFWSlider();
+
+                } );
+        </script>
 	</body>
 </html>

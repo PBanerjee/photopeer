@@ -15,7 +15,7 @@
 	font-size: 16px;
 	height: 34px;
 	line-height: 34px;
-        width: 12%;
+        width: 11%;
 }
 
 .st-container > input {
@@ -42,37 +42,40 @@
 	z-index: 9;
 	bottom: 0;
 }
+#st-control-1, #st-control-0 + a {
+	left: 1%;
+}
 
 #st-control-1, #st-control-1 + a {
-	left: 4%;
+	left: 12%;
 }
 
 #st-control-2, #st-control-2 + a {
-	left: 16%;
+	left: 23%;
 }
 
 #st-control-3, #st-control-3 + a {
-	left: 28%;
+	left: 34%;
 }
 
 #st-control-4, #st-control-4 + a {
-	left: 40%;
+	left: 45%;
 }
 
 #st-control-5, #st-control-5 + a {
-	left: 52%;
+	left: 56%;
 }
 
 #st-control-6, #st-control-6 + a {
-	left: 64%;
+	left: 67%;
 }
 
 #st-control-7, #st-control-7 + a {
-	left: 76%;
+	left: 78%;
 }
 
 #st-control-8, #st-control-8 + a {
-	left: 88%;
+	left: 89%;
 }
 
 .st-container > input:checked + a,
@@ -131,43 +134,43 @@
 	overflow: hidden;
 }
 
-#st-control-1:checked ~ .st-scroll {
+#st-control-0:checked ~ .st-scroll {
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
 	-o-transform: translateY(0%);
 	-ms-transform: translateY(0%);
 	transform: translateY(0%);
 }
-#st-control-2:checked ~ .st-scroll {
+
+#st-control-1:checked ~ .st-scroll {
 	-webkit-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 	-o-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
 	transform: translateY(-100%);
 }
-#st-control-3:checked ~ .st-scroll {
+#st-control-2:checked ~ .st-scroll {
 	-webkit-transform: translateY(-200%);
 	-moz-transform: translateY(-200%);
 	-o-transform: translateY(-200%);
 	-ms-transform: translateY(-200%);
 	transform: translateY(-200%);
 }
-#st-control-4:checked ~ .st-scroll {
+#st-control-3:checked ~ .st-scroll {
 	-webkit-transform: translateY(-300%);
 	-moz-transform: translateY(-300%);
 	-o-transform: translateY(-300%);
 	-ms-transform: translateY(-300%);
 	transform: translateY(-300%);
 }
-#st-control-5:checked ~ .st-scroll {
+#st-control-4:checked ~ .st-scroll {
 	-webkit-transform: translateY(-400%);
 	-moz-transform: translateY(-400%);
 	-o-transform: translateY(-400%);
 	-ms-transform: translateY(-400%);
 	transform: translateY(-400%);
 }
-
-#st-control-6:checked ~ .st-scroll {
+#st-control-5:checked ~ .st-scroll {
 	-webkit-transform: translateY(-500%);
 	-moz-transform: translateY(-500%);
 	-o-transform: translateY(-500%);
@@ -175,7 +178,7 @@
 	transform: translateY(-500%);
 }
 
-#st-control-7:checked ~ .st-scroll {
+#st-control-6:checked ~ .st-scroll {
 	-webkit-transform: translateY(-600%);
 	-moz-transform: translateY(-600%);
 	-o-transform: translateY(-600%);
@@ -183,7 +186,7 @@
 	transform: translateY(-600%);
 }
 
-#st-control-8:checked ~ .st-scroll {
+#st-control-7:checked ~ .st-scroll {
 	-webkit-transform: translateY(-700%);
 	-moz-transform: translateY(-700%);
 	-o-transform: translateY(-700%);
@@ -191,12 +194,20 @@
 	transform: translateY(-700%);
 }
 
+#st-control-8:checked ~ .st-scroll {
+	-webkit-transform: translateY(-800%);
+	-moz-transform: translateY(-800%);
+	-o-transform: translateY(-800%);
+	-ms-transform: translateY(-800%);
+	transform: translateY(-800%);
+}
+
 
 /* Content elements */
 
 .st-deco{
 	width: 288px;
-	height: 120px;
+	height: 79px;
 	position: absolute;
 	top: 0px;
 	left: 4%;
@@ -210,7 +221,7 @@
 }
 
 .st-deco > img {
-    margin: 48px 5px 5px;
+    margin: 5px 5px 5px;
 }
 
 /*[data-icon]:after {
@@ -250,6 +261,7 @@
 	-webkit-backface-visibility: hidden;
 }
 
+#st-control-0:checked ~ .st-scroll #st-panel-0 h2,
 #st-control-1:checked ~ .st-scroll #st-panel-1 h2,
 #st-control-2:checked ~ .st-scroll #st-panel-2 h2,
 #st-control-3:checked ~ .st-scroll #st-panel-3 h2,
@@ -333,6 +345,7 @@
 	margin: 10px 0 0 0;
 	-webkit-backface-visibility: hidden;
 }
+#st-control-0:checked ~ .st-scroll #st-panel-0 p,
 #st-control-1:checked ~ .st-scroll #st-panel-1 p,
 #st-control-2:checked ~ .st-scroll #st-panel-2 p,
 #st-control-3:checked ~ .st-scroll #st-panel-3 p,
