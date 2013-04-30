@@ -7,7 +7,6 @@
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
-       /* background-color: #DDDDDD; */
 }
 
 .cbp-fwslider ul {
@@ -38,8 +37,8 @@
 	border: none;
 	display: block;
 	margin: auto;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100%;
+        min-width: 100%;
 }
 
 .cbp-fwslider nav span {
