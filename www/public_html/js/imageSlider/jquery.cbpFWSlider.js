@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -103,7 +103,7 @@
 
 		},
 		_initEvents : function() {
-			
+
 			var self = this;
 			if( this.itemsCount > 1 ) {
 				this.$navPrev.on( 'click.cbpFWSlider', $.proxy( this._navigate, this, 'previous' ) );
@@ -142,9 +142,9 @@
 				this.$list.css( 'transform', this.support3d ? 'translate3d(' + translateVal + '%,0,0)' : 'translate(' + translateVal + '%)' );
 			}
 			else {
-				this.$list.css( 'margin-left', -1 * this.current * 100 + '%' );	
+				this.$list.css( 'margin-left', -1 * this.current * 100 + '%' );
 			}
-			
+
 			var transitionendfn = $.proxy( function() {
 				this.isAnimating = false;
 			}, this );
@@ -206,6 +206,7 @@
 	};
 
 	$.fn.cbpFWSlider = function( options ) {
+                debugger;
 		if ( typeof options === 'string' ) {
 			var args = Array.prototype.slice.call( arguments, 1 );
 			this.each(function() {
@@ -221,9 +222,9 @@
 				}
 				instance[ options ].apply( instance, args );
 			});
-		} 
+		}
 		else {
-			this.each(function() {	
+			this.each(function() {
 				var instance = $.data( this, 'cbpFWSlider' );
 				if ( instance ) {
 					instance._init();
